@@ -4,6 +4,7 @@
 package org.formation.sylla.zoobackend.entites;
 
 import java.io.Serializable;
+import java.util.StringJoiner;
 
 import org.hibernate.annotations.ManyToAny;
 
@@ -74,6 +75,34 @@ public class CagePojo implements Serializable {
 	 */
 	private static final long serialVersionUID = 9209993839196192672L;
 	
+	
+	public String getImage() {
+		StringJoiner ret = new StringJoiner("");
+		if(codeAnimal == null) {
+			ret.add("images/cage.jpg");
+		}
+		else {
+			ret.add("images/").add(codeAnimal.toLowerCase()).add(".gif");
+		}
+		image = ret.toString();
+		return image;
+	}
 
+	public String getPancarte() {
+		StringJoiner tmp = new StringJoiner("");
+		if(this.codeAnimal == null) {
+			tmp.add("cage vide");
+		}
+		else {
+			tmp.add(nom).add(Integer.toString(age)).add("an(s)");
+			tmp.add(Double.toString(poids)).add("kg");
+			if(this.codeAnimal.equals("Gazelle")  ) {
+				tmp.add(", cornes = ").add(Integer.toString(getGazelle().getLgCornes())).add("cm");
+			}
+		}
+			
+		pancarte = tmp.toString();
+		return pancarte;
+	}
 	
 }

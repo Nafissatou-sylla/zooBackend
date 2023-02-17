@@ -6,11 +6,9 @@ package org.formation.sylla.zoobackend.utilitaire;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import org.formation.sylla.zoo23.model.Animal;
-import org.formation.sylla.zoo23.model.Cage;
-import org.formation.sylla.zoo23.model.technique.CagePleineException;
-import org.formation.sylla.zoo23.model.technique.PorteException;
-import org.formation.sylla.zoo23.service.CagePojo;
+import org.formation.sylla.zoobackend.entites.CagePojo;
+import org.formation.sylla.zoodto.model.Animal;
+import org.formation.sylla.zoodto.model.Cage;
 
 /**
  * @author finas
@@ -18,7 +16,7 @@ import org.formation.sylla.zoo23.service.CagePojo;
  */
 
 public class Conversion {
-	public static final String PACKAGE = "org.formation.sylla.zoo23.model.";
+	public static final String PACKAGE = "org.formation.sylla.zoobackend.modele.";
 	
 	public static Cage pojoToCage(CagePojo cagepojo) {
 		Cage ret = null;

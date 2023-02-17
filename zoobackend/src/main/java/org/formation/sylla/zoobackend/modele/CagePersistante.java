@@ -1,16 +1,25 @@
 package org.formation.sylla.zoobackend.modele;
 
+import org.formation.sylla.zoobackend.entites.CagePojo;
+import org.formation.sylla.zoobackend.entites.GazellePojo;
+import org.formation.sylla.zoobackend.utilitaire.Conversion;
+import org.formation.sylla.zoodto.model.Animal;
+import org.formation.sylla.zoodto.model.Cage;
+import org.formation.sylla.zoodto.model.Mangeable;
+import org.formation.sylla.zoodto.model.technique.BeurkException;
+import org.formation.sylla.zoodto.model.technique.CagePleineException;
+import org.formation.sylla.zoodto.model.technique.PorteException;
 
 public class CagePersistante {
 	private Cage modele;
 	private CagePojo pojo;
-	private CageService stockage;
+	private CageDAO stockage;
 	private int cle;
 	public CagePersistante( int id, int x,int y) {
 		cle = id;
 		modele = new Cage(x,y);
 	}
-	public CagePersistante(int id, DAO<CagePojo> stockage)
+	public CagePersistante(int id, CageDAO stockage)
 	{
 		this.stockage=stockage;
 		pojo = stockage.lire(id);
