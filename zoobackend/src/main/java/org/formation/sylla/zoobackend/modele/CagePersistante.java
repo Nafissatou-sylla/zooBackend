@@ -1,13 +1,5 @@
-package org.formation.sylla.zoo23.model.technique;
+package org.formation.sylla.zoobackend.modele;
 
-import org.formation.sylla.zoo23.model.Animal;
-import org.formation.sylla.zoo23.model.Cage;
-import org.formation.sylla.zoo23.model.Gazelle;
-import org.formation.sylla.zoo23.model.Mangeable;
-import org.formation.sylla.zoo23.service.CagePojo;
-import org.formation.sylla.zoo23.service.GazellePojo;
-import org.formation.sylla.zoo23.stockage.DAO;
-import org.formation.sylla.zoo23.utilitaire.Conversion;
 
 public class CagePersistante {
 	private Cage modele;
