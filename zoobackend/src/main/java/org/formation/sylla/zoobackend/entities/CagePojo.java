@@ -61,10 +61,12 @@ public class CagePojo implements Serializable {
 	private double poids;
 	private int x;
 	private int y;
+	private GazellePojo gazelle;
+	
 	// relation 0 à 1
 	@ManyToOne(fetch = FetchType.LAZY,cascade = {CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REMOVE})
 	@JoinColumn(name = "idAnimal", referencedColumnName = "idAnimal",updatable = false,insertable = false)
-	private GazellePojo gazelle;
+	
 	public String getPancarte() {
 		StringJoiner temp = new StringJoiner(" ");
 		if (codeAnimal == null) {
@@ -73,7 +75,7 @@ public class CagePojo implements Serializable {
 			temp.add(nom).add(Integer.toString(age)).add("an(s)");
 			temp.add(Double.toString(poids)).add("kg");
 			if (codeAnimal.equals("Gazelle")) {
-				temp.add(", cornes =").add(Integer.toString(getGazelle().getLgCornes())).add("cm");
+				temp.add(", cornes =").add(Integer.toString(this.getGazelle().getLgCornes())).add("cm");
 			}
 		}
 		pancarte =  temp.toString();
@@ -90,5 +92,7 @@ public class CagePojo implements Serializable {
 		image = ret.toString();
 		return image;
 	}
-
+	public GazellePojo getGazelle() {
+		return gazelle;
+	}
 }

@@ -35,5 +35,18 @@ public class GazellePojo implements Serializable {
 
 	private int idAnimal;
 	private int lgCornes;
+	
+	public int getLgCornes() {
+		return lgCornes;
+	}
+	public void setLgCornes(int lgCornes) {
+		this.lgCornes = lgCornes;
+	}
+	public int getIdAnimal() {
+		return idAnimal;
+	}
+	public void setIdAnimal(int idAnimal) {
+		this.idAnimal = idAnimal;
+	}
 
 }
