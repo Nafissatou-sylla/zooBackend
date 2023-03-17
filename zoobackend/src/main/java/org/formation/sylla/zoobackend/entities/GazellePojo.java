@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.formation.sylla.zoobackend.entites;
+package org.formation.sylla.zoobackend.entities;
 
 import java.io.Serializable;
 
@@ -15,36 +15,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-/**
- * @author finas
- *
- */
-
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
 @AllArgsConstructor
+
 @Entity
 @Table(name = "gazelle")
-public class GazellePojo implements Serializable{
+public class GazellePojo implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2366003573575403338L;
-	
-	/**
-	 * 
-	 */
-	
+	private static final long serialVersionUID = -8018537466656302756L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
 	private int idAnimal;
 	private int lgCornes;
 
-
-	
 }
