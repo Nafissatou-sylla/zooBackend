@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import org.formation.sylla.zoobackend.entities.CagePojo;
 import org.formation.sylla.zoobackend.modele.CagePersistante;
-import org.formation.sylla.zoodto.service.CageDAO;
+import org.formation.sylla.zoobackend.service.CageDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class Controleur {
 	private CageDAO dao;
 	private List<CagePersistante> lesCages;
 	private void init() {
-		lesCages = dao.lireTous().stream().map(cp->new CagePersistante(cp.getIdAnimal(), dao)).collect(Collectors.toList());
+		lesCages = dao.lireTous().stream().map(cp->new CagePersistante(cp.getIdAnimal(), dao)).collect(Collectors.toList());		
 	}
 	
 	@GetMapping("/tous")

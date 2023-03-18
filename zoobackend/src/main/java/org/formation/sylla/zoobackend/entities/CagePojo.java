@@ -35,9 +35,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @Entity
 @Table(name = "animal")
-@NamedQuery(name = "tous", query = "SELECT cp FROM CagePOJO AS  cp")
-@NamedQuery(name="un", query = "SELECT cp FROM CagePOJO AS cp WHERE cp.idAnimal=:bestiole")
-@NamedQuery(name = "derniere", query ="SELECT cp.idAnimal FROM CagePOJO cp ORDER BY idAnimal DESC LIMIT 1")
+@NamedQuery(name = "tous", query = "SELECT cp FROM CagePojo AS  cp")
+@NamedQuery(name="un", query = "SELECT cp FROM CagePojo AS cp WHERE cp.idAnimal=:bestiole")
+@NamedQuery(name = "derniere", query ="SELECT cp.idAnimal FROM CagePojo cp ORDER BY idAnimal DESC LIMIT 1")
 public class CagePojo implements Serializable {
 
 	@Transient
