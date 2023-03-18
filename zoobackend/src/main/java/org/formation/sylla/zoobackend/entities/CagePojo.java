@@ -15,7 +15,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.NamedQuery;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
@@ -92,7 +91,61 @@ public class CagePojo implements Serializable {
 		image = ret.toString();
 		return image;
 	}
+	
 	public GazellePojo getGazelle() {
 		return gazelle;
 	}
+	public int getIdAnimal() {
+		return idAnimal;
+	}
+	public void setIdAnimal(int idAnimal) {
+		this.idAnimal = idAnimal;
+	}
+	public String getCodeAnimal() {
+		return codeAnimal;
+	}
+	public void setCodeAnimal(String codeAnimal) {
+		this.codeAnimal = codeAnimal;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public double getPoids() {
+		return poids;
+	}
+	public void setPoids(double poids) {
+		this.poids = poids;
+	}
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+	public int getY() {
+		return y;
+	}
+	public void setY(int y) {
+		this.y = y;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public void setPancarte(String pancarte) {
+		this.pancarte = pancarte;
+	}
+	public void setGazelle(GazellePojo gazelle) {
+		this.gazelle = gazelle;
+	}
+
+	
 }
