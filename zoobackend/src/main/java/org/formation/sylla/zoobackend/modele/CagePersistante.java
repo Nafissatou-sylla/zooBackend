@@ -3,7 +3,6 @@ package org.formation.sylla.zoobackend.modele;
 import org.formation.sylla.zoodto.model.Cage;
 import org.formation.sylla.zoobackend.entities.CagePojo;
 import org.formation.sylla.zoobackend.entities.GazellePojo;
-import org.formation.sylla.zoobackend.service.CageDAO;
 import org.formation.sylla.zoobackend.service.CageService;
 import org.formation.sylla.zoobackend.utilitaires.Conversion;
 import org.formation.sylla.zoodto.model.Animal;
@@ -12,6 +11,7 @@ import org.formation.sylla.zoodto.model.Mangeable;
 import org.formation.sylla.zoodto.model.technique.BeurkException;
 import org.formation.sylla.zoodto.model.technique.CagePleineException;
 import org.formation.sylla.zoodto.model.technique.PorteException;
+import org.formation.sylla.zoodto.service.CageDAO;
 
 
 public class CagePersistante {
